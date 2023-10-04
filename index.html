@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Xj3eJ1YOeGn8E6APuTgHWAHgEEAgc/ZvbPqjSAyTVOMeB7SFF1/3fFZaOBgEPpGN" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1, ul {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 8px;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        #city-input {
+            width: 250px;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #weather-output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="banner">Weather App</h1>
+    <div class="form-group">
+        <input id="city-input" class="form-control" type="text" placeholder="Enter city">
+    </div><br>
+    <button type="button" onclick="searchCity()" class="buttonn">Search</button>
+    <div id="weather-output" class="mt-3">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 id="city-name" class="my-0 font-weight-normal">City Name</h4>
+                </div>
+                <div class="card-body">
+                    <h1 id="weather-type" class="card-title">Weather Type</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Temp: <span id="temp">--</span>°</li>
+                        <li>Min Temp: <span id="min-temp">--</span>°</li>
+                        <li>Max Temp: <span id="max-temp">--</span>°</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
